@@ -1,0 +1,123 @@
+:root {
+  --poppins: "Poppins", sans-serif;
+  --open-sans: "Open Sans", sans-serif;
+}
+
+body {
+  font-family: var(--open-sans);
+  margin: 0;
+  padding: 0;
+  /*background: url("images/hg.jpeg");*/
+  background-size: cover;
+  background-position: center;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.animated-title {
+  font-size: 3rem;
+  color: hsl(308, 83%, 50%);
+  opacity: 0; /* Comienza transparente */
+  animation: fadeInSlideUp 3s forwards;
+  font-size: 2rem;
+}
+
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Comienza desplazado hacia abajo */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Termina en la posición original */
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between; /* Space between logo and navbar */
+  align-items: center;
+  padding: 15px;
+  background-color: hsl(0, 0%, 100%); /* Black color with 80% opacity */
+  color: hsl(0, 0%, 100%);
+}
+
+nav ul {
+  list-style: none; /* Elimina las viñetas de la lista */
+  display: flex; /* Muestra los elementos en línea */
+  gap: 60px;
+}
+
+nav a {
+  text-decoration: none; /* Sin subrayado */
+  color: hwb(182 5% 28% / 0.663); /* Color del texto */
+  font-weight: bold; /* Texto en negrita */
+}
+
+#inicio {
+  background-color: hsl(272, 7%, 63%);
+  padding: 65px;
+  border-radius: 5px;
+}
+
+#Planes {
+  opacity: 100;
+  transform: translateY(90px); /* Desplazar hacia arriba */
+  animation: fadeInSlideUp 5s ease-in-out forwards;
+  padding: 50px;
+  background-color: hsl(272, 7%, 63%);
+}
+
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#Planes h2,
+h3 {
+  text-align: center;
+}
+#contacto {
+  background-color: hsl(272, 7%, 63%);
+  text-align: center;
+  padding: 10px;
+}
+#contacto h2,
+p {
+  position: relative;
+  top: 10px;
+  text-align: center;
+}
+
+.contenedor {
+  display: inline-block; /* Permite que los contenedores se muestren en línea */
+  margin: 0 50px;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+}
+
+#footer {
+  background-color: hwb(0 71% 22%);
+  text-align: center;
+  padding: 10px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-arrow:hover .dropdown-menu {
+  display: block;
+}
